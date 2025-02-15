@@ -5,5 +5,5 @@
 body {
   background: white;
   font-size: 18px;
-  font-family: --font-poppins;
+  font-family: var(--font-poppins), sans-serif;
 }
