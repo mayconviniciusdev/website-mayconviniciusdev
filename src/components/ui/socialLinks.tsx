@@ -6,18 +6,21 @@ export const SocialLinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: Socia
   return (
     <div className="flex justify-center gap-4 text-blue">
       <Link
+      className="flex items-center"
       target="_blank" 
       href={"https://github.com/mayconviniciusdev"}>
         {githubIcon && <FontAwesomeIcon icon={githubIcon} className="h-8 hover:text-blue/80"/>}
       </Link>
 
       <Link
+      className="flex items-center"
       target="_blank"
       href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
         <FontAwesomeIcon icon={linkedinIcon} className="h-8 hover:text-blue/80"/>
       </Link>
 
       <Link
+      className="flex items-center"
       target="_blank"
       href={"https://www.instagram.com/mayconviniciusdev/"}>
         <FontAwesomeIcon icon={instagramIcon} className="h-8 hover:text-blue/80"/>
