@@ -1,9 +1,11 @@
 import SwiperSlider from "../ui/swiperSlider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
-import Image from 'next/image';
-import backgroundImage from '../../../public/backgroundImage.png'
-import logoWhite from '../../../public/logoWhite.png'
+import Image from "next/image";
+import backgroundImage from "../../../public/backgroundImage.png";
+import logoWhite from "../../../public/logoWhite.png";
+import profilePicture from "../../../public/profilePicture.jpg";
+import { ButtonBlue } from "../ui/button";
 
 export default function About() {
   const settings: SwiperProps = {
@@ -12,7 +14,7 @@ export default function About() {
     autoplay: true,
   }
   return (
-    <div>
+    <section>
       <SwiperSlider settings={settings}>
         <SwiperSlide>
           <div 
@@ -59,8 +61,23 @@ export default function About() {
           </div>
         </SwiperSlide>
       </SwiperSlider>
-
-
-    </div>
+      
+      <div className="items-center my-16 mx-6 md:grid grid-cols-2">
+        <div className="flex justify-center mb-14 md:justify-end md:mb-0 md:pr-20 ">
+          <Image className="rounded-3xl shadow-blue-cyan shadow-2xl"
+          src={profilePicture}
+          height={300}
+          width={300}
+          alt="Maycon Vinicius"/>
+        </div>
+        
+        <div className="flex flex-col gap-y-2 text-center justify-center md:grid md:text-start md:max-w-lg">
+          <p className="text-blue-cyan font-bold">Olá, meu nome é</p>
+          <h2 className="text-2xl text-blue font-bold">Maycon Vinícius e sou <br/> Desenvolvedor Front-End</h2>
+          <p className="text-lg text-blue-cyan font-medium">Me encontrei no mundo da programação quando percebi os resultados e conquistas que algumas linhas de códigos podem fazer. Venho obtendo conhecimentos para o desenvolvimento web e de aplicativos com objetivo de implementar tecnologias e ajudar empresas ou projetos independentes em sua jornada online. Também sou um entusiasta por tecnologia, ideias inovadoras e um ótimo café.</p>
+          <div className="flex justify-center font-semibold text-sm md:justify-start"><ButtonBlue/></div>
+        </div>
+      </div>
+    </section>
   );
 }
