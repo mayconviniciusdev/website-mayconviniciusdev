@@ -1,0 +1,4 @@
+.custom-timeline::before { background-color: #052B47 !important; width: 3px !important; }
+.vertical-timeline {width: 100%;}
+.vertical-timeline-element-content h2 { color: #0E7178 !important }
+.vertical-timeline-element-icon svg { width: 16px !important; height: 16px !important; margin-left: -8px !important; margin-top: -8px !important;}
