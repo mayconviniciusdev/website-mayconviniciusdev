@@ -10,7 +10,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    template: "Projeto - %s",
+    template: "Projeto | %s",
     default: "Maycon Vinícius | Dev",
   },
 };
