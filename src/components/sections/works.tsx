@@ -25,7 +25,7 @@ export default function Works() {
           </div>
 
           <div className="max-w-[1440px]">
-            <div className="grid grid-cols-2 gap-5">
+            <div className="flex flex-col md:grid grid-cols-2 gap-5">
               <div className="hover:opacity-80">
                 <Link target="_blank" href={"/smartechrs"}>
                   <Image
