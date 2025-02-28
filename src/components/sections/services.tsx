@@ -1,5 +1,5 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import { servicesLine } from "../types/servicesLine";
+import { servicesLine } from "../../data/servicesLine";
 import "react-vertical-timeline-component/style.min.css";
 import "../../css/reactTimeline.css";
 
