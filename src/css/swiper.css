@@ -1,2 +1,5 @@
+.swiper-wrapper {align-items: center;}
+
+.no-bullets .swiper-pagination {display: none;}
 .swiper-pagination-bullet {width: 10px; height: 10px; background-color: #F6F6F6;}
 .swiper-pagination-bullet-active {background-color: #F6F6F6;}
