@@ -3,9 +3,6 @@ import Link from "next/link";
 import { SocialLinksBlue } from "../ui/socialLinks";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import Image from "next/image";
-import smartechIMG from '../../../public/smartechImage.png';
-
 export default function Works() {
   return (
     <section>
@@ -28,10 +25,9 @@ export default function Works() {
             <div className="flex flex-col md:grid grid-cols-2 gap-5">
               <div className="hover:opacity-80">
                 <Link target="_blank" href={"/smartechrs"}>
-                  <Image
+                  <img
                     alt="Background"
-                    src={smartechIMG}
-                    quality={100}
+                    src="/smartechImage.png"
                     style={{width: '100%', height: 'auto'}}
                     className="rounded-tl-3xl"/>
                 </Link>

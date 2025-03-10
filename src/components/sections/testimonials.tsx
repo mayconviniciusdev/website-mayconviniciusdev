@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { SwiperProps, SwiperSlide } from "swiper/react"
 import SwiperSlider from "../ui/swiperSlider"
 import testimonials from "@/data/testimonialsList"
@@ -39,7 +37,7 @@ export default function Testimonials() {
                 <p className="text-white text-center text-base">{testimonials.quote}</p>
                 
                 <div className="flex items-center mt-5">
-                  <Image
+                  <img
                   alt="Robson"
                   src={testimonials.img}
                   width={50}

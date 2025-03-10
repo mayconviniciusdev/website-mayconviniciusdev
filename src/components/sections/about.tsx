@@ -1,10 +1,6 @@
 import SwiperSlider from "../ui/swiperSlider";
 import { SwiperProps, SwiperSlide } from "swiper/react";
 
-import Image from "next/image";
-import backgroundImage from "../../../public/backgroundImage.png";
-import logoWhite from "../../../public/logoWhite.png";
-import profilePicture from "../../../public/profilePicture.jpg";
 import { ButtonBlue } from "../ui/button";
 
 export default function About() {
@@ -19,22 +15,17 @@ export default function About() {
         <SwiperSlide>
           <div 
           style={{position: 'relative', width: '100%', height: '630px'}}>
-            <Image
-            src={backgroundImage}
+            <img
+            src="/backgroundImage.png"
             alt="Banner"
-            quality={100}
-            layout="fill"
-            objectFit="cover"/>
+            className="w-full h-full object-cover"/>
             
             <div 
             style={{position: 'absolute', width: '150px', height: '150px',
             top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
-              <Image
-              src={logoWhite}
+              <img
               alt="Logo"
-              quality={100}
-              layout="fill"
-              objectFit="contain"/>
+              src="/logoWhite.png"/>
             </div>
           </div>
         </SwiperSlide>
@@ -42,20 +33,17 @@ export default function About() {
         <SwiperSlide>
           <div 
           style={{position: 'relative', width: '100%', height: '630px'}}>
-              <Image
-              src={backgroundImage}
+              <img
+              src="/backgroundImage.png"
               alt="Banner"
-              quality={100}
-              layout="fill"
-              objectFit="cover"/>
+              className="w-full h-full object-cover"/>
               
               <div 
-              style={{position: 'absolute', top: '50%',
-              left: '50%', transform: 'translate(-50%, -50%)'}}>
-                <div className=' text-white text-xl font-bold'>
+              style={{position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}}>
+                <div className='text-white text-xl font-bold'>
                   <h2>Programação,</h2>
-                  <h2>Desenvolvimento e </h2>
-                  <h2>Tecnologia!</h2>
+                  <h2>Desenvolvimento</h2>
+                  <h2>e Tecnologia!</h2>
                 </div>
               </div>
           </div>
@@ -64,10 +52,11 @@ export default function About() {
       
       <div className="items-center my-16 mx-6 md:grid grid-cols-2">
         <div className="flex justify-center mb-14 md:justify-end md:mb-0 md:pr-20 ">
-          <Image className="rounded-3xl shadow-blue-cyan shadow-2xl"
-          src={profilePicture}
-          height={300}
-          width={300}
+          <img
+          className="rounded-3xl shadow-blue-cyan shadow-2xl"
+          src="/profilePicture.jpg"
+          width="300"
+          height="300"
           alt="Maycon Vinicius"/>
         </div>
         
