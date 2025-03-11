@@ -28,8 +28,7 @@ export default function Works() {
                   <img
                     alt="Background"
                     src="/smartechImage.png"
-                    style={{width: '100%', height: 'auto'}}
-                    className="rounded-tl-3xl"/>
+                    className="rounded-tl-3xl object-cover h-[300px] lg:h-full"/>
                 </Link>
               </div>
             </div>
