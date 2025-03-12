@@ -32,7 +32,7 @@ export default function Testimonials() {
           {testimonials.map((testimonials, index) => (
             <SwiperSlide
             key={index} 
-            className="bg-gradient-to-r from-blue-cyan to-blue rounded-3xl py-10 px-16 mt-5">
+            className="bg-gradient-to-r from-blue-cyan to-blue rounded-3xl py-10 px-8 mt-5">
               <div className="flex flex-col items-center">
                 <p className="text-white text-center text-base">{testimonials.quote}</p>
                 
