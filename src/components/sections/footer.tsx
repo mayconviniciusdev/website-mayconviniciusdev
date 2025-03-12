@@ -16,7 +16,7 @@ export default function Footer() {
 					VOLTAR PARA CIMA
 					<FontAwesomeIcon 
 					icon={faArrowUp}
-					className="w-4 ml-1"/>
+					className="w-4"/>
 				</Link>
 
 				<p className="mt-4">RIO GRANDE DO SUL.</p>
