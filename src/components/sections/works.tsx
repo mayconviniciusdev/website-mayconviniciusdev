@@ -31,7 +31,7 @@ export default function Works() {
                     <img
                       alt="Background"
                       src="/smartechImage.png"
-                      className="rounded-tl-3xl object-cover h-[200px] lg:h-full"/>
+                      className="rounded-tl-3xl object-cover"/>
                   </Link>
                 </div>
               </div>
