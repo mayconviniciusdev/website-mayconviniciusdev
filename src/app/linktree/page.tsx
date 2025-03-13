@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const metadata: Metadata = {title: 'Linktree'}
+export const metadata: Metadata = {title: { absolute: "Maycon | Linktree" }}
 
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
