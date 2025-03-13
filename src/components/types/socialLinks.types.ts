@@ -4,4 +4,5 @@ export interface SocialIcons {
   githubIcon?: IconProp;
   linkedinIcon: IconProp;
   instagramIcon: IconProp;
+  siteIcon?: IconProp;
 }
