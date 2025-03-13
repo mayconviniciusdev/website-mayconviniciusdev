@@ -34,9 +34,35 @@ export default function Header() {
           {isMenuOpen && (
             <nav className="md:hidden flex flex-col items-end font-semibold text-sm text-blue-cyan mt-4">
               <ul className="text-right my-2">
-                <Link className="cursor-pointer" to="about" offset={-55} smooth={true} duration={500}><p>QUEM SOU?</p></Link>
-                <Link className="cursor-pointer" to="services" offset={-55} smooth={true} duration={500}><p className="my-2">MEUS SERVIÇOS</p></Link>
-                <Link className="cursor-pointer" to="works" offset={-55} smooth={true} duration={500}><p>PORTFÓLIO</p></Link>
+                <Link 
+                className="cursor-pointer" 
+                to="about" 
+                offset={-170} 
+                smooth={true} 
+                duration={500} 
+                onClick={() => {setIsMenuOpen(false);}}>
+                  <p>QUEM SOU?</p>
+                </Link>
+
+                <Link 
+                className="cursor-pointer" 
+                to="services"
+                offset={-170}
+                smooth={true}
+                duration={500} 
+                onClick={() => {setIsMenuOpen(false);}}>
+                  <p className="my-2">MEUS SERVIÇOS</p>
+                </Link>
+
+                <Link 
+                className="cursor-pointer" 
+                to="works" 
+                offset={-170} 
+                smooth={true} 
+                duration={170} 
+                onClick={() => {setIsMenuOpen(false);}}>
+                  <p>PORTFÓLIO</p>
+                </Link>
               </ul>
               <ButtonBlue/>
             </nav>
