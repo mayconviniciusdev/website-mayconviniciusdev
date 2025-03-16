@@ -4,7 +4,6 @@ import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-poppins",
   weight: ["400", "600", "700", "800"],
 });
 
@@ -21,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="PT-BR">
-      <body className={`${poppins.variable} antialiased`}>
+    <html lang="PT-BR" className={poppins.className}>
+      <body>
         {children}
       </body>
     </html>
