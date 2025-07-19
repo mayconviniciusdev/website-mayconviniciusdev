@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { ButtonBlue } from "../ui/button";
-import { SocialLinksBlue } from "../ui/socialLinks";
+import { SocialLinksBlue } from "../socialLinks/links";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";

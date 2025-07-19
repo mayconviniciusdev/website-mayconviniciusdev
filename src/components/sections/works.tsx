@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { SocialLinksBlue } from "../ui/socialLinks";
+import { SocialLinksBlue } from "../socialLinks/links";
 import { faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import { Element } from 'react-scroll';

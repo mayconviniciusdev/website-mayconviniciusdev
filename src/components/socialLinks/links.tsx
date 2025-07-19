@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SocialIcons } from "../types/socialLinks.types";
+import { SocialIcons } from "./linksTypes";
 import Link from "next/link";
 
 export const SocialLinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
@@ -54,7 +54,6 @@ export const SocialLinksWhite = ({githubIcon, linkedinIcon, instagramIcon}: Soci
     
   );
 }
-
 
 export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIcon}: SocialIcons) => {
   return (

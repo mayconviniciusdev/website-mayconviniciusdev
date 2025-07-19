@@ -6,7 +6,7 @@ import "../../css/reactTimeline.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import { SocialLinksBlue } from "../ui/socialLinks";
+import { SocialLinksBlue } from "../socialLinks/links";
 import { Element } from "react-scroll";
 
 export default function Services() {
