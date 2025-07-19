@@ -1,12 +1,7 @@
-'use client'
+'use client';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faChartSimple, faCompass, faCrosshairs, faCube, faDesktop, faFireFlameCurved, faGear, faHeadset, faRocket, faSeedling, faSpinner, faSquareCheck, faToggleOn, faUserTie, faWandMagicSparkles } from "@fortawesome/free-solid-svg-icons";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/autoplay';
+import { SwiperProps, SwiperSlide } from "swiper/react";
+import SwiperSlider from "@/components/ui/swiperSlider";
 
 import { faqData } from "@/components/FAQ/faqData";
 import FAQItem from "@/components/FAQ/faqItem";
@@ -14,6 +9,14 @@ import FAQItem from "@/components/FAQ/faqItem";
 import { Link } from "react-scroll";
 
 export default function Page() {
+	const settings: SwiperProps = {
+		spaceBetween:14,
+		breakpoints: { 640: {slidesPerView: 4}},
+		autoplay: true,
+		pagination: { clickable: true },
+		loop: true 
+	}
+
 	return (
 		<main className="text-center">
 			<section className="max-w-4xl mx-auto">
@@ -161,20 +164,13 @@ export default function Page() {
 						<li className="bg-blue/90 rounded-xl py-2">Dados de acessos (logins e senhas)</li>
 					</ul>
 
-					<div className="mt-14 max-w-4xl mx-auto">
-						<div className="font-semibold">
+					<div className="mt-14 max-w-4xl mx-auto no-bullets">
+						<div className="font-semibold mb-8">
 							<p className="text-white text-2xl">Mais do que um sistema, <br/>uma vantagem real!</p>
 							<p className="text-white/70">Complementos gratuitos que <br/>potencializam sua evolução:</p>
 						</div>
 
-						<Swiper
-						className="mt-10"
-						spaceBetween={14}
-						breakpoints={{ 640: {slidesPerView: 2}, 1024: {slidesPerView: 4} }}
-						modules={[Autoplay, A11y]}
-						pagination={{ clickable: true }}
-						autoplay={{ delay: 2500, disableOnInteraction: false }}
-						loop={true}>
+						<SwiperSlider settings={settings}>
 							<SwiperSlide>
 								<span className="flex justify-center">
 									<img src="/bonusImage1.png" className="rounded-xl"/>
@@ -216,7 +212,7 @@ export default function Page() {
 									<img src="/bonusImage6.png" className="rounded-xl"/>
 								</span>
 							</SwiperSlide>
-						</Swiper>
+						</SwiperSlider>
 					</div>
 
 					<div className="text-white max-w-md mx-auto mt-14" id="checkout">
@@ -238,7 +234,13 @@ export default function Page() {
 								<p>✅ SUPORTE VITALÍCIO</p>
 							</div>
 							
-							<a href="https://pay.kiwify.com.br/bUTI7Oj" target="_blank" rel="noopener noreferrer" className="p-5 bg-white text-blue font-bold text-base rounded-lg">EU ESCOLHO UMA VIDA LENDÁRIA!</a>
+							<a 
+							href="https://pay.kiwify.com.br/bUTI7Oj" 
+							target="_blank" 
+							rel="noopener noreferrer" 
+							className="p-5 bg-white text-blue font-bold text-base rounded-lg">
+								EU ESCOLHO UMA VIDA LENDÁRIA!
+							</a>
 						</div>
 					</div>
 				</div>
