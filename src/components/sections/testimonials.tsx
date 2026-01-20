@@ -1,50 +1,33 @@
-import { SwiperProps, SwiperSlide } from "swiper/react"
-import SwiperSlider from "../ui/swiperSlider"
-import testimonials from "@/data/testimonialsList"
+import { LinksBlue } from "../socialLinks/links";
+import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import SwiperSlider from "../ui/swiperSlider";
+import { SwiperSlide, SwiperProps } from "swiper/react";
+import testimonials from "@/data/testimonialsList";
 
 export default function Testimonials() {
   const settings: SwiperProps = {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 20,
-    breakpoints: {
-      0: { // Tablet
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      1024: { // Desktop
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      1440: {
-        slidesPerView: 3,
-        spaceBetween: 20,
-      }
-    },
     pagination: {clickable: true},
     autoplay: true,
   }
   
 	return (
-		<section className="mx-6 my-16 bullets-bottom">
-      <div className="max-w-[1440px] mx-auto no-bullets">
-        <h2 className="font-bold text-2xl text-blue text-start">DEPOIMENTOS</h2>
+		<section className="px-4 my-16">
+      <div className="max-w-270 mx-auto no-bullets">
+        <h2 className="font-bold text-2xl text-[#004369] mb-2">DEPOIMENTOS DE CLIENTES</h2>
+        <LinksBlue githubIcon={faGithub} linkedinIcon={faLinkedin} instagramIcon={faInstagram}/>
+        
         <SwiperSlider settings={settings}>
           {testimonials.map((testimonials, index) => (
-            <SwiperSlide
-            key={index} 
-            className="bg-gradient-to-r from-blue-cyan to-blue rounded-3xl py-10 px-8 mt-5">
-              <div className="flex flex-col items-center">
-                <p className="text-white text-center text-base">{testimonials.quote}</p>
-                
-                <div className="flex items-center mt-5">
-                  <img
-                  alt="Robson"
-                  src={testimonials.img}
-                  width={50}
-                  height={50}
-                  className="rounded-full"/>
-                  <p className="ml-4 text-white/80 text-base">{testimonials.name}</p>
+            <SwiperSlide key={index} className="bg-linear-to-r from-[#0E7178] to-[#004369] rounded-2xl py-10">
+              <div className="flex flex-col-reverse items-center justify-center px-10 md:flex-row md:px-20">
+                <div className="flex flex-col-reverse md:flex-col md:pr-10 mt-5 md:mt-0">
+                  <p className="text-[#F6F6F6] mt-2 max-w-180 md:mb-2 md:mt-0">{`❛ ${testimonials.quote} ❜`}</p>
+                  <p className="text-[#F6F6F6]/50 text-sm">{testimonials.name}</p>
                 </div>
+                
+                <img alt="Foto de Robson Santos" src={testimonials.img} className="rounded-full w-35 h-35 md:w-50 md:h-50"/>
               </div>
           </SwiperSlide>
           ))}
