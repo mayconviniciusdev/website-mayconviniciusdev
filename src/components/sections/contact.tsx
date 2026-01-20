@@ -1,9 +1,7 @@
 'use client';
 import { useState } from 'react';
-
 import { Element } from 'react-scroll';
-import { ButtonWhite } from '../ui/button';
-
+import { ButtonForm } from '../ui/buttons';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -21,8 +19,8 @@ type ContactFormType = z.infer<typeof ContactSchema>;
 
 export default function Contact() {
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormType>({ resolver: zodResolver(ContactSchema)});
-
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
   const sendEmail: SubmitHandler<ContactFormType> = async (data) => {
     setStatus('loading');
 
@@ -48,55 +46,38 @@ export default function Contact() {
 
   return (
     <Element name="contact">
-      <section className="bg-gradient-to-r from-blue to-blue-cyan py-16">
-        <div className="mx-5">
-          <div className="max-w-[1440px] mx-auto">
-            <h2 className="font-bold text-2xl text-white">CONTATO</h2>
-            <p className="py-2 text-base text-white/80">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas, dicas de livros, séries e filmes ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
+      <section className="bg-linear-to-r from-[#004369] to-[#0E7178] py-16">
+        <div className="px-5">
+          <div className="max-w-270 mx-auto">
+            <h2 className="font-bold text-2xl text-[#F6F6F6]">CONTATO</h2>
+            <p className="pt-2 text-base text-[#F6F6F6]/50">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas, dicas de livros, séries e filmes ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
 
-            <form onSubmit={handleSubmit(sendEmail)} className="mt-8">
-              <input
-              placeholder="Como você se chama?"
-              type="text"
-              {...register('name')}
-              className="w-full py-2 pl-4 rounded-lg bg-transparent border border-white placeholder-white focus:outline-none focus:border-white/50 focus:placeholder-white"
-              required/>
-              {errors.name && <p className="text-red-200 text-sm ml-1">{errors.name.message}</p>}
+            <form onSubmit={handleSubmit(sendEmail)} className="mt-8 [:not(:placeholder-shown)]:text-[#F6F6F6]/50 [:not(:placeholder-shown)]:text-sm">
+              <input placeholder="Como você se chama?" type="text" {...register('name')} required
+              className="w-full py-4 pl-4 rounded-lg bg-transparent border border-[#F6F6F6] focus:border-[#F6F6F6]/50 focus:outline-none focus:placeholder-[#F6F6F6]/80 placeholder:text-sm placeholder-[#F6F6F6]"/>
+              {errors.name && <p className="text-red-200 text-sm ml-1 mt-1">{errors.name.message}</p>}
 
-              <div className="grid gap-4 md:grid-cols-2 my-4">
+              <div className="my-4 grid gap-4 md:grid-cols-2">
                 <div className="flex flex-col">
-                  <input
-                  placeholder="Seu melhor e-mail..."
-                  type="email"
-                  {...register('email')}
-                  className="py-2 pl-4 rounded-lg bg-transparent border border-white placeholder-white focus:outline-none focus:border-white/50 focus:placeholder-white"
-                  required/>
-                  {errors.email && <p className="text-red-200 text-sm ml-1">{errors.email.message}</p>}
+                  <input placeholder="Seu melhor e-mail..." type="email" {...register('email')} required
+                  className="py-4 pl-4 rounded-lg bg-transparent border border-[#F6F6F6] focus:border-[#F6F6F6]/50 focus:outline-none focus:placeholder-[#F6F6F6]/80 placeholder:text-sm placeholder-[#F6F6F6]"/>
+                  {errors.email && <p className="text-red-200 text-sm ml-1 mt-1">{errors.email.message}</p>}
                 </div>
                 
                 <div className="flex flex-col">
-                  <input
-                  placeholder="Agora seu Whatsapp..."
-                  type="tel"
-                  {...register('whatsapp')}
-                  className="py-2 pl-4 rounded-lg bg-transparent border border-white placeholder-white focus:outline-none focus:border-white/50 focus:placeholder-white"
-                  required/>
-                  {errors.whatsapp && <p className="text-red-200 text-sm ml-1">{errors.whatsapp.message}</p>}
+                  <input placeholder="Agora seu Whatsapp..." type="tel" {...register('whatsapp')} required
+                  className="py-4 pl-4 rounded-lg bg-transparent border border-[#F6F6F6] focus:border-[#F6F6F6]/50 focus:outline-none focus:placeholder-[#F6F6F6]/80 placeholder:text-sm placeholder-[#F6F6F6]"/>
+                  {errors.whatsapp && <p className="text-red-200 text-sm ml-1 mt-1">{errors.whatsapp.message}</p>}
                 </div>
               </div>
 
-              <textarea
-              placeholder="Fale um pouco sobre sua ideia ou necessidade!"
-              {...register('message')}
-              className="w-full py-2 pl-4 rounded-lg bg-transparent border border-white placeholder-white focus:outline-none focus:border-white/50 focus:placeholder-white"
-              required/>
-              {errors.message && <p className="text-red-200 text-sm ml-1 mb-4">{errors.message.message}</p>}
+              <textarea placeholder="Fale um pouco sobre sua ideia ou necessidade!" {...register('message')} required
+              className="w-full py-4 pl-4 rounded-lg bg-transparent border border-[#F6F6F6] focus:border-[#F6F6F6]/50 focus:outline-none focus:placeholder-[#F6F6F6]/80 placeholder:text-sm placeholder-[#F6F6F6]"/>
+              {errors.message && <p className="text-red-200 text-sm ml-1 mt-1 mb-4">{errors.message.message}</p>}
 
-              <ButtonWhite
-              type="submit"
-              disabled={status === 'loading'}>
+              <ButtonForm type="submit" disabled={status === 'loading'}>
                 {status === 'loading' ? 'ENVIANDO...' : 'ENTRE EM CONTATO'}
-              </ButtonWhite>
+              </ButtonForm>
 
               <div className="ml-1 mt-4">
                 {status === 'success' && (<p className="text-green-200">Mensagem enviada com sucesso!</p>)}
