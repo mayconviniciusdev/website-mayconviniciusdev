@@ -1,4 +1,4 @@
-import { LinksBlue } from "../socialLinks/links";
+import { LinksBlue } from "../ui/links";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import SwiperSlider from "../ui/swiperSlider";
 import { SwiperSlide, SwiperProps } from "swiper/react";

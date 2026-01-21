@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { LinksBlue } from "../socialLinks/links";
+import { LinksBlue } from "../ui/links";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";

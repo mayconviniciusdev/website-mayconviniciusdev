@@ -5,7 +5,7 @@ import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink, faMugHot } from "@fortawesome/free-solid-svg-icons";
 
-import { SocialLinktree } from "../../components/socialLinks/links";
+import { SocialLinktree } from "../../components/ui/links";
 import Link from "next/link";
 
 export default function Page() {   
