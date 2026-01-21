@@ -13,8 +13,8 @@ const Page = () => {
     <body>
       <Header/>
       <About/>
-      <Services/>
       <Works/>
+      <Services/>
       <Testimonials/>
       <Contact/>
       <Footer/>
