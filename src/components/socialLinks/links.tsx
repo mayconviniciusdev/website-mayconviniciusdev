@@ -1,57 +1,47 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SocialIcons } from "./linksTypes";
-import Link from "next/link";
+import Link from "next/link"; 
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export const SocialLinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
+interface SocialIcons {
+  githubIcon?: IconProp;
+  linkedinIcon: IconProp;
+  instagramIcon: IconProp;
+  siteIcon?: IconProp;
+}
+
+export const LinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
   return (
-    <div className="flex justify-center gap-4 text-blue">
-      <Link
-      className="flex items-center"
-      target="_blank" 
-      href={"https://github.com/mayconviniciusdev"}>
-        {githubIcon && <FontAwesomeIcon icon={githubIcon} className="h-8 hover:text-blue/80"/>}
+    <div className="mb-5 flex gap-4 text-[#0E7178]">
+      <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
+        {githubIcon && <FontAwesomeIcon icon={githubIcon} className="text-2xl hover:text-[#0E7178]/60"/>}
       </Link>
 
-      <Link
-      className="flex items-center"
-      target="_blank"
-      href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={linkedinIcon} className="h-8 hover:text-blue/80"/>
+      <Link target="_blank" href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
+        <FontAwesomeIcon icon={linkedinIcon} className="text-2xl hover:text-[#0E7178]/60"/>
       </Link>
 
-      <Link
-      className="flex items-center"
-      target="_blank"
-      href={"https://www.instagram.com/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={instagramIcon} className="h-8 hover:text-blue/80"/>
+      <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev/"}>
+        <FontAwesomeIcon icon={instagramIcon} className="text-2xl hover:text-[#0E7178]/60"/>
       </Link>
     </div>
-    
   );
 }
 
 export const SocialLinksWhite = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
   return (
-    <div className="flex justify-center gap-4 text-white">
-      <Link
-      target="_blank" 
-      href={"https://github.com/mayconviniciusdev"}>
-        {githubIcon && <FontAwesomeIcon icon={githubIcon} className="h-8 hover:text-white/80"/>}
+    <div className="flex gap-4 text-[#F6F6F6]">
+      <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
+        {githubIcon && <FontAwesomeIcon icon={githubIcon} className="text-xl hover:text-[#F6F6F6]/80"/>}
       </Link>
 
-      <Link
-      target="_blank"
-      href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={linkedinIcon} className="h-8 hover:text-white/80"/>
+      <Link target="_blank" href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
+        <FontAwesomeIcon icon={linkedinIcon} className="text-xl hover:text-[#F6F6F6]/80"/>
       </Link>
 
-      <Link
-      target="_blank"
-      href={"https://www.instagram.com/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={instagramIcon} className="h-8 hover:text-white/80"/>
+      <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev/"}>
+        <FontAwesomeIcon icon={instagramIcon} className="text-xl hover:text-[#F6F6F6]/80"/>
       </Link>
     </div>
-    
   );
 }
 
