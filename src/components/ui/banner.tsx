@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ButtonWhite } from "./ui/buttons";
+import { ButtonWhite } from "./buttons";
 
 export default function Banner() {
   const texts = ["Vamos conversar sobre seu projeto...", "e dar vida à sua ideia?"]

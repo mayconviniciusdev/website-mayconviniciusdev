@@ -1,5 +1,5 @@
-import Menu from "../menu";
-import Banner from "../banner";
+import Menu from "../ui/menu";
+import Banner from "../ui/banner";
 
 export default function Header() {
   return (

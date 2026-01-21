@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
-import { SocialLinksWhite } from "./socialLinks/links";
+import { SocialLinksWhite } from "../socialLinks/links";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { ButtonMenu } from "./ui/buttons";
+import { ButtonMenu } from "./buttons";
 
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
