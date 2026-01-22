@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <textarea placeholder="Fale um pouco sobre sua ideia ou necessidade!" {...register('message')} required
+              <textarea placeholder="Fale um pouco sobre sua ideia..." {...register('message')} required
               className="w-full py-4 pl-4 rounded-lg bg-transparent border border-[#F6F6F6] focus:border-[#F6F6F6]/50 focus:outline-none focus:placeholder-[#F6F6F6]/80 placeholder:text-sm placeholder-[#F6F6F6]"/>
               {errors.message && <p className="text-red-200 text-sm ml-1 mt-1 mb-4">{errors.message.message}</p>}
 
