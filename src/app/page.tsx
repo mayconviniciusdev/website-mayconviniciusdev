@@ -10,7 +10,7 @@ import Works from "@/components/sections/works";
 
 const Page = () => {
   return (
-    <body>
+    <section>
       <Header/>
       <About/>
       <Works/>
@@ -18,7 +18,7 @@ const Page = () => {
       <Testimonials/>
       <Contact/>
       <Footer/>
-    </body>
+    </section>
   )
 }
 
