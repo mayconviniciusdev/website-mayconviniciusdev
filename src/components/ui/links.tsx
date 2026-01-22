@@ -47,10 +47,10 @@ export const SocialLinksWhite = ({githubIcon, linkedinIcon, instagramIcon}: Soci
 
 export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIcon}: SocialIcons) => {
   return (
-    <div className="text-white text-xs">
+    <div className="text-[#F6F6F6] text-xs">
       <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
         {githubIcon && ( 
-        <div className="flex items-center justify-center hover:text-white/80 bg-blue-cyan py-4 px-8 my-4 rounded-xl">
+        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
           <FontAwesomeIcon icon={githubIcon} className="h-6 mr-4"/>
           <span>GitHub</span>
         </div>)}
@@ -58,21 +58,21 @@ export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIco
       
       <Link target="_blank" href={"https://mayconviniciusdev.com/"}>
         {siteIcon && ( 
-        <div className="flex items-center justify-center hover:text-white/80 bg-blue-cyan py-4 px-8 my-4 rounded-xl">
+        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
           <FontAwesomeIcon icon={siteIcon} className="h-6 mr-4"/>
           <span>Website</span>
         </div>)}
       </Link>
 
       <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev"}>
-        <div className="flex items-center justify-center hover:text-white/80 bg-blue-cyan py-4 px-8 my-4 rounded-xl">
+        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
           <FontAwesomeIcon icon={instagramIcon} className="h-6 mr-4"/>
           <span>Instagram</span>
         </div>
       </Link>
 
       <Link target="_blank" href={"https://www.linkedin.com/in/mayconviniciusdev"}>
-        <div className="flex items-center justify-center hover:text-white/80 bg-blue-cyan py-4 px-8 my-4 rounded-xl">
+        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
           <FontAwesomeIcon icon={linkedinIcon} className="h-6 mr-4"/>
           <span>Linkedin</span>
         </div>

@@ -10,23 +10,13 @@ import Link from "next/link";
 
 export default function Page() {   
 	return (	
-		<div className="bg-gradient-to-br from-blue-cyan to-white flex flex-col justify-center items-center h-screen">
-			<div className="pb-2 flex justify-center">
-				<img
-				src='/profilePicture.jpg'
-				width={350}
-				style={{ maxWidth: '40%', height: 'auto'}}
-				className="rounded-tl-3xl rounded-br-3xl shadow-slate-500 shadow-2xl"
-				alt="Maycon Vinicius"/>
+		<div className="bg-linear-to-br from-[#0E7178] to-[#F6F6F6] flex flex-col justify-center items-center h-screen">
+			<div className="pb-4 flex justify-center">
+				<img src='/mayconPhoto.jpeg'alt="Imagem de Maycon Vinicius" width={350} style={{ maxWidth: '40%', height: 'auto'}} className="rounded-tl-3xl rounded-br-3xl rounded-tr-lg rounded-bl-lg shadow-[#004369] shadow-xl"/>
 			</div>
-			
-			<SocialLinktree
-			githubIcon={faGithub} 
-			linkedinIcon={faLinkedin} 
-			instagramIcon={faInstagram} 
-			siteIcon={faLink}/>
+			<SocialLinktree githubIcon={faGithub} linkedinIcon={faLinkedin} instagramIcon={faInstagram} siteIcon={faLink}/>
 
-			<div className="pt-2 text-blue-cyan text-center text-xs">
+			<div className="pt-2 text-[#004369] text-center text-xs">
 				<div className="flex content-center">
 					<span className="flex items-center">
 						Desenvolvido com muito
