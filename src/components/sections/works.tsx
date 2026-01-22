@@ -15,12 +15,12 @@ export default function Works() {
             </div>
 
             <div className="grid md:grid-cols-2">
-              <Link target="_blank" href={"/smartechrs"}>
+              <Link target="_blank" href={"https://www.smartechrs.com.br"}>
                 <img alt="" src="/smartechImage.png"
                 className="h-75 rounded-tl-3xl object-cover hover:opacity-80"/>
               </Link>
 
-              <Link target="_blank" href={"/sectapera"}>
+              <Link target="_blank" href={"https://sindicatotapera.com"}>
                 <img alt="" src="/sectaperaImage.png"
                 className="h-75 rounded-br-3xl object-cover hover:opacity-80 md:rounded-tr-3xl md:rounded-br-none"/>
               </Link>
