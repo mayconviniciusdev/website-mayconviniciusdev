@@ -13,7 +13,7 @@ export default function About() {
           
           <div className="flex flex-col gap-y-4 text-center items-center justify-center md:max-w-120 md:text-start md:items-start">
             <h1 className="text-3xl text-[#004369] font-bold">Maycon Vinícius – Desenvolvedor Web</h1>
-            <div className='text-[20px] text-[#0E7178] font-medium'>
+            <div className='text-[18px] text-[#0E7178] font-medium'>
               <p className='mb-2'>Me encontrei no mundo da programação quando percebi os resultados e conquistas que algumas linhas de códigos podem fazer.</p>
               <p>Venho obtendo conhecimentos para o desenvolvimento web e de aplicativos com objetivo de implementar tecnologias e ajudar empresas ou projetos independentes em sua jornada online.</p>
             </div>

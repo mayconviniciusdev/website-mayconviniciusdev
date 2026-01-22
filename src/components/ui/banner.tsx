@@ -34,7 +34,7 @@ export default function Banner() {
 
   return (
     <section className="text-center flex flex-col items-center">
-      <h1 className="text-[#F6F6F6] pb-5 text-[20px] font-bold max-w-130">Criando experiências digitais que geram resultados reais para empresas e projetos independentes...</h1>
+      <h1 className="text-[#F6F6F6] pb-5 text-[18px] font-bold max-w-130">Criando experiências digitais que geram resultados reais para empresas e projetos independentes...</h1>
       <ButtonWhite text={displayedText}/>
     </section>
   )

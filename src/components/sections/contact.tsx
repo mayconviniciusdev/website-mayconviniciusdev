@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="px-5">
           <div className="max-w-270 mx-auto">
             <h2 className="font-bold text-2xl text-[#F6F6F6]">CONTATO</h2>
-            <p className="pt-2 text-base text-[#F6F6F6]/50">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas, dicas de livros, séries e filmes ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
+            <p className="pt-2 text-[18px] text-[#F6F6F6]/50">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas, dicas de livros, séries e filmes ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
 
             <form onSubmit={handleSubmit(sendEmail)} className="mt-8 [:not(:placeholder-shown)]:text-[#F6F6F6]/50 [:not(:placeholder-shown)]:text-sm">
               <input placeholder="Como você se chama?" type="text" {...register('name')} required
