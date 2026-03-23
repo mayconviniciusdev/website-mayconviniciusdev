@@ -1,13 +1,29 @@
-import Menu from "../ui/menu";
+import Image from "next/image";
+import Menu from "../menu";
 import Banner from "../ui/banner";
+
+/*
+  Componente: Header
+  Arquivo: src/components/header/index.tsx
+
+  Resumo:
+  - Exibe uma imagem de fundo utilizando `next/image`.
+  - Inclui o componente de navegação (Menu) e o banner principal.
+  - Utiliza posicionamento relativo para permitir sobreposição de elementos.
+*/
 
 export default function Header() {
   return (
-    <section style={{backgroundImage: "url('/backgroundImage.png')", backgroundSize: "cover", backgroundPosition: "center", paddingLeft: 16, paddingRight: 16}}>
+   <header className="relative h-200 w-full">
+      <Image
+      src="/initial/backgroundImage.svg"
+      className="object-cover object-center -z-10"
+      alt="Background"
+      fill
+      priority/>
+
       <Menu/>
-      <div className="flex items-center justify-center h-80">
-        <Banner/>
-      </div>
-    </section>
+      <Banner/>
+    </header>
   )
 }
