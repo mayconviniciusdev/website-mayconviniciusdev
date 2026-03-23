@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
-import { SocialLinksMenu } from "./ui/links";
+import { HeaderSocialLinks } from "./ui/links";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { ButtonMenu } from "./ui/buttons";
+import { HeaderNavButton } from "./ui/buttons";
 import Image from "next/image";
 
 /*
@@ -42,7 +42,7 @@ export default function Menu() {
             alt="Logo da maicoding"/>
             
             {/* Componente que exibe os ícones das redes sociais. */}
-            <SocialLinksMenu
+            <HeaderSocialLinks
             githubIcon={faGithub} 
             linkedinIcon={faLinkedin} 
             instagramIcon={faInstagram}/>
@@ -85,7 +85,7 @@ export default function Menu() {
           </ul>
 
           {/* Botão de contato reutilizável */}
-          <ButtonMenu text="ENTRE EM CONTATO"/>
+          <HeaderNavButton text="ENTRE EM CONTATO"/>
         </nav>
       </section>
     </Element>

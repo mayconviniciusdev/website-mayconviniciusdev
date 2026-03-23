@@ -1,6 +1,16 @@
 import { Link } from "react-scroll";
 import React from 'react';
 
+/*
+  Componente: HeaderNavButton
+  Arquivo: src/components/ui/buttons.tsx
+
+  Resumo:
+  - Contém de botões reutilizáveis para o projeto.
+  - Inclui botões de navegação com `react-scroll` e botão para formulários.
+*/
+
+// Interface que descreve as props esperadas pelo componente.
 interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -10,12 +20,19 @@ interface ButtonProps {
   text?: string;
 }
 
-export const ButtonMenu: React.FC<ButtonProps> = ({text}) => {
-  return (
-    <div className="md:border-[#F6F6F6] md:border-2 md:ml-2 md:p-2 md:rounded-lg cursor-pointer font-bold transition-all duration-300 hover:border-[#F6F6F6]/50 hover:text-[#F6F6F6]/80 md:hover:scale-105 pt-4 text-right">
-      <Link to="contact" smooth={true} duration={500}>{text}</Link>
-    </div>
-  );
+// Componente que renderiza um Link de navegação suave até o elemento com id "contact".
+export const HeaderNavButton: React.FC<ButtonProps> = ({text}) => { 
+  return (  
+    <Link
+    to="contact"
+    smooth={true}
+    duration={500}
+    aria-label={text ?? "Ir para contato"}
+    className="cursor-pointer font-bold transition-all duration-300 text-[#004369] hover:text-[#004369]/80 
+    md:bg-[#D9D9D9] md:ml-4 md:px-6 md:py-2 md:hover:scale-105 md:rounded-lg"> 
+      {text}
+    </Link>
+  ); 
 }
 
 export const ButtonWhite: React.FC<ButtonProps> = ({text}) => {

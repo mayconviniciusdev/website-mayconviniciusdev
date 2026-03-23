@@ -1,12 +1,55 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link"; 
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+/*
+  Componente: HeaderSocialLinks
+  Arquivo: src/components/ui/links.tsx
 
-interface SocialIcons {
-  githubIcon?: IconProp;
+  Resumo:
+  - Exibe ícones de redes sociais no header.
+  - Cada ícone funciona como um link externo para perfis sociais.
+  - Utiliza `FontAwesome` para renderização dos ícones.
+  - Links são abertos em uma nova aba (`target="_blank"`).
+*/
+
+// Interface que descreve as propriedades esperadas pelo componente.
+interface IconsProps {
+  githubIcon: IconProp;
   linkedinIcon: IconProp;
   instagramIcon: IconProp;
   siteIcon?: IconProp;
+  email?: IconProp;
+}
+
+// Componente que renderiza os ícones de redes sociais no header.
+export const HeaderSocialLinks = ({githubIcon, linkedinIcon, instagramIcon}: IconsProps) => {
+  return (
+    <div className="flex gap-4 opacity-50">
+      <Link
+      target="_blank"
+      href={"https://github.com/mayconviniciusdev"}>
+        <FontAwesomeIcon 
+        className="text-xl hover:text-[#D9D9D9]/50"
+        icon={githubIcon}/>
+      </Link>
+
+      <Link
+      target="_blank"
+      href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
+        <FontAwesomeIcon 
+        className="text-xl hover:text-[#D9D9D9]/50"
+        icon={linkedinIcon}/>
+      </Link>
+
+      <Link
+      target="_blank"
+      href={"https://www.instagram.com/mayconviniciusdev/"}>
+        <FontAwesomeIcon 
+        className="text-xl hover:text-[#D9D9D9]/50"
+        icon={instagramIcon}/>
+      </Link>
+    </div>
+  );
 }
 
 export const LinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
@@ -22,24 +65,6 @@ export const LinksBlue = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons
 
       <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev/"}>
         <FontAwesomeIcon icon={instagramIcon} className="text-2xl hover:text-[#0E7178]/60"/>
-      </Link>
-    </div>
-  );
-}
-
-export const SocialLinksWhite = ({githubIcon, linkedinIcon, instagramIcon}: SocialIcons) => {
-  return (
-    <div className="flex gap-4 text-[#F6F6F6]">
-      <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
-        {githubIcon && <FontAwesomeIcon icon={githubIcon} className="text-xl hover:text-[#F6F6F6]/80"/>}
-      </Link>
-
-      <Link target="_blank" href={"https://www.linkedin.com/in/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={linkedinIcon} className="text-xl hover:text-[#F6F6F6]/80"/>
-      </Link>
-
-      <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev/"}>
-        <FontAwesomeIcon icon={instagramIcon} className="text-xl hover:text-[#F6F6F6]/80"/>
       </Link>
     </div>
   );
