@@ -35,19 +35,29 @@ export const HeaderNavButton: React.FC<ButtonProps> = ({text}) => {
   ); 
 }
 
-export const ButtonWhite: React.FC<ButtonProps> = ({text}) => {
+// Componente que renderiza um Link de navegação suave até o elemento com id "works".
+export const PrimaryButton: React.FC<ButtonProps> = ({text}) => {
   return (
-    <div className="border-2 border-[#F6F6F6] hover:border-[#F6F6F6]/50 text-sm text-[#F6F6F6] hover:text-[#F6F6F6]/80 hover:scale-105 font-bold py-2 px-4 rounded-lg cursor-pointer transition-all duration-300">
-      <Link to="contact" smooth={true} duration={500}>{text}</Link>
-    </div>
+    <Link
+    to="works"
+    smooth={true}
+    className="cursor-pointer rounded-lg bg-[#2F4F4F] px-8 py-2 text-md text-[#D9D9D9] hover:scale-105 transition-all duration-300"
+    duration={500}>
+      {text}
+    </Link>
   );
 }
 
-export const ButtonBlue: React.FC<ButtonProps> = ({text}) => {
+// Componente que renderiza um Link de navegação suave até o elemento com id "contact".
+export const SecondaryButton: React.FC<ButtonProps> = ({text}) => {
   return (
-    <div className="border-2 border-[#0E7178] hover:border-[#004369]/80 text-sm text-[#0E7178] hover:text-[#004369] hover:scale-105 font-bold py-2 px-4 rounded-lg cursor-pointer transition-all duration-300">
-      <Link to="contact" smooth={true} duration={500}>{text}</Link>
-    </div>
+    <Link
+    to="contact"
+    smooth={true}
+    className="cursor-pointer rounded-lg bg-[#D9D9D9] px-8 py-2 font-semibold text-md text-[#004369] hover:scale-105 transition-all duration-300"
+    duration={500}>
+      {text}
+    </Link>
   );
 }
 

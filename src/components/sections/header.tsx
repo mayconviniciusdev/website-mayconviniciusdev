@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Menu from "../menu";
-import Banner from "../ui/banner";
+import Hero from "../hero";
 
 /*
   Componente: Header
@@ -23,7 +23,7 @@ export default function Header() {
       priority/>
 
       <Menu/>
-      <Banner/>
+      <Hero/>
     </header>
   )
 }
