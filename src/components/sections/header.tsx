@@ -14,7 +14,7 @@ import Hero from "../hero";
 
 export default function Header() {
   return (
-   <header className="relative h-200 w-full">
+   <header className="pb-25 relative w-full">
       <Image
       src="/initial/backgroundImage.svg"
       className="object-cover object-center -z-10"
