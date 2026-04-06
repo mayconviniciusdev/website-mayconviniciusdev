@@ -1,24 +1,119 @@
 import { Element } from 'react-scroll';
-import { ButtonBlue } from '../ui/buttons';
+import { SecondaryButton } from '../ui/buttons';
+import Image from 'next/image';
+
+/*
+  Componente: About
+  Arquivo: src/components/sections/about.tsx
+
+  Resumo:
+  - Seção "Sobre mim" do site.
+  - Apresenta informações pessoais, objetivo profissional e tecnologias utilizadas.
+  - Utiliza `react-scroll` para navegação suave.
+  - Renderiza tecnologias de forma dinâmica e organizada.
+*/
+
+// Lista de tecnologias organizadas em linhas para exibição.
+const techStack = [
+ [
+    { src: "/initial/html5-brands.svg", alt: "HTML5" },
+    { src: "/initial/css3-brands.svg", alt: "CSS3" },
+  ],
+  [
+    { src: "/initial/js-brands.svg", alt: "JavaScript" },
+    { src: "/initial/typescript.svg", alt: "TypeScript" },
+    { src: "/initial/react-brands.svg", alt: "React" },
+    { src: "/initial/tailwind-brands.svg", alt: "Tailwind CSS" },
+  ],
+  [
+    { src: "/initial/node.svg", alt: "Node.js" },
+    { src: "/initial/postgresql.svg", alt: "PostgreSQL" },
+    { src: "/initial/php-brands.svg", alt: "PHP" },
+  ],
+  [
+    { src: "/initial/git-brands.svg", alt: "Git" },
+    { src: "/initial/github-brands.svg", alt: "GitHub" },
+  ],
+  [
+    { src: "/initial/figma-brands.svg", alt: "Figma" },
+  ],
+];
 
 export default function About() {
   return (
-    <section className='px-4'>  
-      <Element name="about" className='my-16'>
-        <div className="items-center md:grid md:grid-cols-2">
-          <div className="flex justify-center mb-14 md:justify-end md:mb-0 md:pr-20">
-            <img src="/mayconPhoto.jpeg" alt="Foto de Maycon Vinicius da Rosa"
-            className="rounded-bl-[100px] rounded-tr-[100px] shadow-[#004369] shadow-2xl w-60 md:w-85"/>
+    <section> 
+      {/* Elemento âncora para navegação suave */}
+      <Element name="about">
+         {/* Seção: Sobre Mim */}
+        <div className="my-25 flex flex-col items-center">
+          <div className="relative mb-8">
+            <h2 className="relative z-10 mx-6 font-bold text-3xl text-[#004369]">UM POUCO SOBRE MIM</h2>
+
+            <Image
+            src="/initial/heading-about.svg"
+            alt="Sobre mim"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-165 h-auto"
+            aria-hidden="true"
+            quality={100}
+            width={660}
+            height={660}/>
           </div>
           
-          <div className="flex flex-col gap-y-4 text-center items-center justify-center md:max-w-120 md:text-start md:items-start">
-            <h1 className="text-3xl text-[#004369] font-bold">Maycon Vinícius – Desenvolvedor Web</h1>
-            <div className='text-[18px] text-[#0E7178] font-medium'>
-              <p className='mb-2'>Me encontrei no mundo da programação quando percebi os resultados e conquistas que algumas linhas de códigos podem fazer.</p>
-              <p>Venho obtendo conhecimentos para o desenvolvimento web e de aplicativos com objetivo de implementar tecnologias e ajudar empresas ou projetos independentes em sua jornada online.</p>
+          <div className="max-w-178 text-center">
+            <h1 className="text-[#0E7178] text-3xl font-semibold">Maycon Vinícius – Desenvolvedor Web</h1>
+            <div className='text-[#191919] text-xl font-medium mt-4 my-5'>
+              <p className='mb-5'>Me encontrei na programação quando percebi que algumas linhas de código podem transformar ideias em resultados reais, gerando resultados e soluções poderosas para empresas e projetos.</p>
+              <p>Atualmente, venho aprimorando constantemente meus conhecimentos em desenvolvimento web e aplicações, com o objetivo de implementar tecnologias modernas e ajudar negócios a fortalecer sua presença digital. Meu foco é desenvolver sites funcionais, rápidos e bem estruturados, que transmitam profissionalismo e gerem oportunidades para quem os utiliza.</p>
             </div>
             
-            <ButtonBlue text='Como posso te ajudar?'/>
+            <SecondaryButton text='Como posso ajudar seu projeto?'/>
+          </div>
+        </div>
+
+        {/* Seção: Tecnologias */}
+        <div className='my-25 flex flex-col items-center'>
+          <div className="relative mb-8 w-165 flex justify-center">
+            <h2 className="relative z-10 mx-6 font-bold text-3xl text-[#004369]">EXPERIÊNCIA COM</h2>
+
+            <Image
+            src="/initial/heading-technology.svg"
+            alt="Sobre mim"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-130 h-auto"
+            aria-hidden="true"
+            quality={100}
+            width={520}
+            height={520}/>
+          </div>
+
+          <div className="max-w-206.75 text-center">
+            <div className='text-[#191919] text-xl font-medium mt-4 my-5'>
+              <p className='mb-5'>
+                Além da minha stack principal de desenvolvimento, também utilizo tecnologias e ferramentas como 
+                <strong className='font-bold text-[#0E7178]'> WordPress, Elementor, Sass e Bootstrap </strong>
+                para atender diferentes tipos de projetos e necessidades de clientes.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center">
+              {techStack.map((row, rowIndex) => (
+                <div key={rowIndex} className="flex justify-center">
+                  {row.map((tech, index) => (
+                    <div key={index}
+                    className="flex flex-col items-center justify-center p-4 rounded-2xl transition-all duration-300 
+                    bg-white/5 backdrop-blur-md border border-white/10
+                    hover:-translate-y-2 hover:shadow-lg hover:shadow-cyan-500/20">
+                      <Image
+                      src={tech.src}
+                      alt={tech.alt}
+                      quality={100}
+                      width={80}
+                      height={80}/>
+                      <span className="mt-2 text-sm opacity-80">{tech.alt}</span>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Element>
