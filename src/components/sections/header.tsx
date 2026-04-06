@@ -4,7 +4,7 @@ import Hero from "../hero";
 
 /*
   Componente: Header
-  Arquivo: src/components/header/index.tsx
+  Arquivo: src/components/sections/header.tsx
 
   Resumo:
   - Exibe uma imagem de fundo utilizando `next/image`.
@@ -15,6 +15,7 @@ import Hero from "../hero";
 export default function Header() {
   return (
    <header className="pb-25 relative w-full">
+      {/* Imagem de fundo do header */}
       <Image
       src="/initial/backgroundImage.svg"
       className="object-cover object-center -z-10"
@@ -22,8 +23,8 @@ export default function Header() {
       fill
       priority/>
 
-      <Menu/>
-      <Hero/>
+      <Menu/>{/* Componente de navegação */}
+      <Hero/>{/* Seção de apresentação */}
     </header>
   )
 }
