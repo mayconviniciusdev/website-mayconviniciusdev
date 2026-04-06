@@ -46,10 +46,11 @@ export default function Works() {
               <Link
               key={index}
               target="_blank"
+              rel="noopener noreferrer"
               href={works.href}
               className='transition-all duration-300 hover:-translate-y-2'>
                 <Image
-                alt="Trabalhos"
+                alt={`Projeto ${works.name}`}
                 width={450}
                 height={75}
                 src={works.img}
