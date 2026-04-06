@@ -46,6 +46,7 @@ export default function About() {
       <Element name="about">
          {/* Seção: Sobre Mim */}
         <div className="my-25 flex flex-col items-center">
+          {/* Título */}
           <div className="relative mb-8">
             <h2 className="relative z-10 mx-6 font-bold text-3xl text-[#004369]">UM POUCO SOBRE MIM</h2>
 
@@ -59,6 +60,7 @@ export default function About() {
             height={660}/>
           </div>
           
+          {/* Conteúdo textual  */}
           <div className="max-w-178 text-center">
             <h1 className="text-[#0E7178] text-3xl font-semibold">Maycon Vinícius – Desenvolvedor Web</h1>
             <div className='text-[#191919] text-xl font-medium mt-4 my-5'>
@@ -72,6 +74,7 @@ export default function About() {
 
         {/* Seção: Tecnologias */}
         <div className='my-25 flex flex-col items-center'>
+          {/* Título */}
           <div className="relative mb-8 w-165 flex justify-center">
             <h2 className="relative z-10 mx-6 font-bold text-3xl text-[#004369]">EXPERIÊNCIA COM</h2>
 
@@ -85,7 +88,9 @@ export default function About() {
             height={520}/>
           </div>
 
+
           <div className="max-w-206.75 text-center">
+            {/* Conteúdo textual */}
             <div className='text-[#191919] text-xl font-medium mt-4 my-5'>
               <p className='mb-5'>
                 Além da minha stack principal de desenvolvimento, também utilizo tecnologias e ferramentas como 
@@ -94,6 +99,7 @@ export default function About() {
               </p>
             </div>
 
+            {/* Grid de tecnologias */}
             <div className="flex flex-col items-center">
               {techStack.map((row, rowIndex) => (
                 <div key={rowIndex} className="flex justify-center">
