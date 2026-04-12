@@ -10,7 +10,7 @@ import React from 'react';
   - Inclui botões de navegação com `react-scroll` e botão para formulários.
 */
 
-// Interface que descreve as props esperadas pelo componente.
+// Interface que descreve as props esperadas pelos componentes de botão
 interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -20,7 +20,7 @@ interface ButtonProps {
   text?: string;
 }
 
-// Componente que renderiza um Link de navegação suave até o elemento com id "contact".
+// Botão de navegação para a seção "contact" (usado no header)
 export const HeaderNavButton: React.FC<ButtonProps> = ({text}) => { 
   return (  
     <Link
@@ -35,7 +35,7 @@ export const HeaderNavButton: React.FC<ButtonProps> = ({text}) => {
   ); 
 }
 
-// Componente que renderiza um Link de navegação suave até o elemento com id "works".
+// Botão principal que leva até a seção "works"
 export const PrimaryButton: React.FC<ButtonProps> = ({text}) => {
   return (
     <Link
@@ -48,7 +48,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({text}) => {
   );
 }
 
-// Componente que renderiza um Link de navegação suave até o elemento com id "contact".
+// Botão secundário que leva até a seção "contact"
 export const SecondaryButton: React.FC<ButtonProps> = ({text}) => {
   return (
     <Link
@@ -61,10 +61,11 @@ export const SecondaryButton: React.FC<ButtonProps> = ({text}) => {
   );
 }
 
+// Botão utilizado no formulário
 export const ButtonForm: React.FC<ButtonProps> = ({type = 'button', disabled = false, onClick, children}) => {
   return (
     <button type={type} disabled={disabled} onClick={onClick}
-    className={`w-full py-6 rounded-lg cursor-pointer font-bold text-center text-[#004369] bg-[#F6F6F6] hover:bg-[#F6F6F6]/80`}>
+    className="w-full cursor-pointer rounded-lg py-6 font-bold text-md text-center text-[#D9D9D9] bg-[#2F4F4F] hover:bg-[#2F4F4F]/80">
       {children}
     </button>
   );
