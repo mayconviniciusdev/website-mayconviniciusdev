@@ -1,5 +1,5 @@
 import "react-vertical-timeline-component/style.min.css";
-import "../css/reactTimeline.css";
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="PT-BR" className={poppins.className}>
-      <body>
+      <body className="bg-[#D9D9D9]">
         {children}
       </body>
     </html>
