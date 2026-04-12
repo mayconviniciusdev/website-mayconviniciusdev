@@ -1,10 +1,21 @@
-import { LinksBlue } from "../ui/links";
-import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 import SwiperSlider from "../ui/swiperSlider";
 import { SwiperSlide, SwiperProps } from "swiper/react";
 import testimonials from "@/data/testimonialsList";
 
+/*
+  Componente: Testimonials
+  Arquivo: src/components/sections/testimonials.tsx
+
+  Resumo:
+  - Exibe a seção de depoimentos de clientes/usuários.
+  - Utiliza um slider (Swiper) para navegação entre os depoimentos.
+  - Os dados são carregados dinamicamente a partir de `testimonialsList`.
+  - Cada depoimento contém imagem, texto e nome da pessoa.
+*/
+
 export default function Testimonials() {
+   // Configurações do slider swiper
   const settings: SwiperProps = {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -13,25 +24,46 @@ export default function Testimonials() {
   }
   
 	return (
-		<section className="px-4 my-16">
-      <div className="max-w-270 mx-auto no-bullets">
-        <h2 className="font-bold text-2xl text-[#004369] mb-2">DEPOIMENTOS DE CLIENTES</h2>
-        <LinksBlue githubIcon={faGithub} linkedinIcon={faLinkedin} instagramIcon={faInstagram}/>
+		<section className="bg-[#2F4F4F] px-5">
+      <div>
+        <div className="flex flex-col items-center">
+          {/* Título da seção */}
+          <div className="relative mb-12 mt-25">
+            <h2 className="relative z-10 mx-25 font-bold text-3xl text-[#D9D9D9]">O QUE DIZEM SOBRE MIM?</h2>
+          
+            <Image
+            src="/initial/heading-testimonials.svg"
+            alt="Portfolio"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            aria-hidden="true"
+            quality={100}
+            width={516}
+            height={516}/>
+          </div>
+        </div>
         
-        <SwiperSlider settings={settings}>
-          {testimonials.map((testimonials, index) => (
-            <SwiperSlide key={index} className="bg-linear-to-r from-[#0E7178] to-[#004369] rounded-2xl py-10">
-              <div className="flex flex-col-reverse items-center justify-center px-10 md:flex-row md:px-20">
-                <div className="flex flex-col-reverse md:flex-col md:pr-10 mt-5 md:mt-0">
-                  <p className="text-[#F6F6F6] mt-2 max-w-180 md:mb-2 md:mt-0">{`❛ ${testimonials.quote} ❜`}</p>
-                  <p className="text-[#F6F6F6]/50 text-sm">{testimonials.name}</p>
+        <div className="max-w-215 mx-auto no-bullets pb-25">
+          <SwiperSlider settings={settings}>
+            {/* Mapeamento dos depoimentos */}
+            {testimonials.map((testimonials, index) => (
+              <SwiperSlide key={index} className="bg-[#D9D9D9] rounded-3xl py-10">
+                <div className="flex flex-col-reverse items-center justify-center px-20 md:flex-row">
+                  <div className="flex flex-col-reverse text-center text-[#2F4F4F] md:flex-col md:pr-10">
+                    <p className="font-semibold mt-4 md:mt-2">{`❛${testimonials.quote} ❜`}</p>
+                    <p className="mt-4 md:mt-2">{testimonials.name}</p>
+                  </div>
+                  
+                  <Image
+                  alt={`Foto de ${testimonials.name}`}
+                  className="rounded-full"
+                  src={testimonials.img}
+                  width={180}
+                  height={180}/>
                 </div>
-                
-                <img alt="Foto de Robson Santos" src={testimonials.img} className="rounded-full w-35 h-35 md:w-50 md:h-50"/>
-              </div>
-          </SwiperSlide>
-          ))}
-        </SwiperSlider>
+            </SwiperSlide>
+            ))}
+          </SwiperSlider>
+        </div>
       </div>
     </section>
 	)
