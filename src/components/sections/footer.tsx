@@ -1,26 +1,38 @@
-import { Link } from "react-scroll";
-import { LinksBlue } from "../ui/links";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FooterSocialLinks } from "../ui/links";
 import { faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+
+/*
+  Componente: Footer
+  Arquivo: src/components/sections/footer.tsx
+
+  Resumo:
+  - Exibe informações de localização e identificação do desenvolvedor.
+  - Contém logo e links para redes sociais no rodapé.
+*/
 
 export default function Footer() {
   return (
-    <div className="mx-auto mt-10 mb-5 text-center">
-      <div className="px-4 text-[#004369]">
-        <Link to="menu" offset={-55} smooth={true} duration={500}
-				className="flex items-center justify-center cursor-pointer font-bold text-xs">
-					VOLTAR PARA CIMA <FontAwesomeIcon icon={faArrowUp} className="w-4"/>
-				</Link>
+    <div className="mx-auto py-8 text-center bg-[#2F4F4F]">
+      <div className="px-4 text-[#F6F6F6]">
+				<p>RIO GRANDE DO SUL, PASSO FUNDO.</p>
+				<p className="font-semibold">MAYCON VINÍCIUS, DESENVOLVEDOR WEB.</p>
 
-				<div className="font-semibold">
-					<p className="mt-4">RIO GRANDE DO SUL.</p>
-					<p>MAYCON VINÍCIUS, DESENVOLVEDOR WEB.</p>
-					<span className="text-[#0E7178]">contato@mayconviniciusdev.com</span>
-				</div>
-
-        <div className="mt-4 flex justify-center">
-					<LinksBlue githubIcon={faGithub} linkedinIcon={faLinkedin} instagramIcon={faInstagram}/>
+				<div className="flex justify-center items-end gap-4 mt-4">
+					<Image
+					src="/logo.svg"
+					width={23}
+					height={23}
+					quality={100}
+					alt="Logo da maicoding"/>
+										
+					{/* Componente que exibe os ícones das redes sociais. */}
+					<FooterSocialLinks
+					githubIcon={faGithub}
+					linkedinIcon={faLinkedin} 
+					instagramIcon={faInstagram}
+					emailIcon={faEnvelope}/>
 				</div>
 			</div>
     </div>
