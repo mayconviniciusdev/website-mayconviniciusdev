@@ -24,25 +24,22 @@ export default function Testimonials() {
   }
   
 	return (
-		<section className="bg-[#2F4F4F] px-5">
-      <div>
+		<section className="bg-[#2F4F4F]">
+      <div className="px-5">
         <div className="flex flex-col items-center">
           {/* Título da seção */}
-          <div className="relative mb-12 mt-25">
-            <h2 className="relative z-10 mx-25 font-bold text-3xl text-[#D9D9D9]">O QUE DIZEM SOBRE MIM?</h2>
-          
+          <div className="relative mt-25">
             <Image
             src="/initial/heading-testimonials.svg"
-            alt="Portfolio"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            alt="Depoimentos"
             aria-hidden="true"
             quality={100}
-            width={516}
-            height={516}/>
+            width={400}
+            height={400}/>
           </div>
         </div>
         
-        <div className="max-w-215 mx-auto no-bullets pb-25">
+        <div className="max-w-215 mx-auto no-bullets mt-8 pb-25">
           <SwiperSlider settings={settings}>
             {/* Mapeamento dos depoimentos */}
             {testimonials.map((testimonials, index) => (
