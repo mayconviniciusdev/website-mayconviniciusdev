@@ -22,20 +22,17 @@ export default function Works() {
       <Element name="works">
         <div className=" flex flex-col items-center">
           {/* Título e descrição da seção */}
-          <div className="relative mb-8 mt-25">
-            <h2 className="relative z-10 mx-25 font-bold text-3xl text-[#D9D9D9]">PROJETOS</h2>
-          
+          <div className="relative mb-4 mt-25">
             <Image
             src="/initial/heading-portfolio.svg"
             alt="Portfolio"
-            className="absolute left-1/2 top-1/4 -translate-x-1/2 -translate-y-1/2 w-129"
             aria-hidden="true"
             quality={100}
-            width={516}
-            height={516}/>
+            width={400}
+            height={400}/>
           </div>
 
-          <p className="max-w-178 text-center text-[#D9D9D9] text-xl font-medium mt-4 my-10">
+          <p className="max-w-178 text-center text-[#D9D9D9] text-xl font-medium  mb-10">
             Aqui você pode conferir alguns projetos desenvolvidos por mim, onde aplico soluções modernas de design e desenvolvimento para criar experiências digitais eficientes.
           </p>
 
