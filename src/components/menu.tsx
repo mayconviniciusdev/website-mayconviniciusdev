@@ -29,11 +29,10 @@ export default function Menu() {
   ];
   
   return (
-    // Element do react-scroll que permite rolar até este bloco.
     <Element name="menu">
-      <section className="text-[#D9D9D9]/80 bg-[#2F4F4F]/80 h-30 flex flex-col justify-center">
-        <div className="flex justify-center">
-          <div className="flex items-center gap-4 mb-2">
+      <section className="text-[#D9D9D9]/80 backdrop-blur-md py-5 md:py-8">
+        <div className="flex justify-center md:mb-5">
+          <div className="flex items-center gap-4">
             <Image
             src="/logo.svg"
             width={23}
@@ -41,23 +40,21 @@ export default function Menu() {
             quality={100}
             alt="Logo da maicoding"/>
             
-            {/* Componente que exibe os ícones das redes sociais. */}
             <HeaderSocialLinks
             githubIcon={faGithub} 
             linkedinIcon={faLinkedin} 
             instagramIcon={faInstagram}/>
-          </div>
 
-          {/* Botão toggle para abrir/fechar o menu em telas pequenas. */}
-          <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-xl cursor-pointer"
-          aria-controls="main-navigation"
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}>
-            <FontAwesomeIcon 
-            icon={isMenuOpen ? faTimes : faBars}/>
-          </button>
+            {/* Botão toggle para mobile */}
+            <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-2xl cursor-pointer"
+            aria-controls="main-navigation"
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? 'Fechar menu' : 'Abrir menu'}>
+              <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars}/>
+            </button>
+          </div>
         </div>
             
         {/* Navegação do menu */}
@@ -65,29 +62,30 @@ export default function Menu() {
         id="main-navigation"
         role="navigation"
         aria-hidden={!isMenuOpen}
-        className={`${isMenuOpen ? 'flex' : 'hidden'} font-semibold text-sm flex flex-col
-        md:flex md:flex-row md:justify-center md:items-center`}>
-          <ul className="text-right flex flex-col gap-4
-          md:flex-row">
+        className={`${isMenuOpen ? 'flex' : 'hidden'} 
+        font-semibold text-sm p-6 w-full text-center items-center bg-[#2F4F4F]/90 backdrop-blur-sm rounded-b-2xl shadow-xl transition-all flex flex-row justify-center absolute top-full
+        md:p-0 md:bg-transparent md:shadow-none md:static`}>
+          <ul className="flex flex-col gap-4 w-full md:flex-row md:w-auto">
             {menuItems.map((item) => (
-              <Link
-              key={item.to}
-              to={item.to}
-              smooth={true}
-              duration={500}
-              offset={-170}
-              onClick={() => setIsMenuOpen(false)}
-              className="cursor-pointer transition-all duration-300 hover:text-[#D9D9D9]/50
-              md:hover:scale-105">
-                <p>{item.label}</p>
-              </Link>
+              <li key={item.to} className="w-full md:w-auto ">
+                <Link
+                to={item.to}
+                smooth={true}
+                duration={500}
+                offset={-170}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-center cursor-pointer transition-all duration-300 hover:text-[#D9D9D9]/50">
+                  {item.label}
+                </Link>
+              </li>
             ))}
-          </ul>
 
-          {/* Botão de contato reutilizável */}
-          <HeaderNavButton text="ENTRE EM CONTATO"/>
+            <div className="pb-1.5 md:pb-0">
+              <HeaderNavButton text="ENTRE EM CONTATO"/>
+            </div>
+          </ul>
         </nav>
       </section>
     </Element>
-  )
+  );
 }
