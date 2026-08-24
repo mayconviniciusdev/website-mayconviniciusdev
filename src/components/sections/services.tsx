@@ -17,22 +17,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Services() {
   return (
-    <section className="px-4 my-25">
+    <section className="px-5 my-25">
       {/* Elemento âncora para navegação suave */}
       <Element name="services">
         <div className="flex flex-col items-center">
-          <div className="relative mb-8">
-            {/* Título */}
-            <h2 className="relative z-10 mx-28 font-bold text-3xl text-[#004369]">COMO POSSO AJUDAR</h2>
-
+          <div className="relative mb-4">  
             <Image
             src="/initial/heading-services.svg"
-            alt="Sobre mim"
-            className="absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/3 w-165 h-auto"
+            alt="Serviços"
             aria-hidden="true"
             quality={100}
-            width={660}
-            height={660}/>
+            width={400}
+            height={400}/>
           </div>
         </div>
 
