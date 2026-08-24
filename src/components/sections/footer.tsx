@@ -15,7 +15,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <div className="mx-auto py-8 text-center bg-[#2F4F4F]">
-      <div className="px-4 text-[#F6F6F6]">
+      <div className="px-5 text-[#F6F6F6]">
 				<p>RIO GRANDE DO SUL, PASSO FUNDO.</p>
 				<p className="font-semibold">MAYCON VINÍCIUS, DESENVOLVEDOR WEB.</p>
 

@@ -53,7 +53,7 @@ export default function Hero() {
   }, [charIndex, isDeleting, texts]);
 
   return (
-    <section className="mt-25 text-center flex flex-col items-center">
+    <section className="mt-25 px-5 text-center flex flex-col items-center">
       <Image
       src={"/avatar.svg"}
       alt="Imagem de Maycon Vinícius | Dev"
