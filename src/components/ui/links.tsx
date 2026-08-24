@@ -94,7 +94,7 @@ export const FooterSocialLinks = ({githubIcon, linkedinIcon, instagramIcon, emai
 }
 
 
-export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIcon}: SocialIcons) => {
+export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIcon}: IconsProps) => {
   return (
     <div className="text-[#F6F6F6] text-xs">
       <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
