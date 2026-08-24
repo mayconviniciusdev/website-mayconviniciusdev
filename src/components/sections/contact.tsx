@@ -76,21 +76,16 @@ export default function Contact() {
     <Element name="contact">
       <section className='px-5 my-25'>
         <div className="flex flex-col items-center">
-        {/* Título e descrição da seção */}
-        <div className="relative mb-8">
-          <h2 className="relative z-10 mx-25 font-bold text-3xl text-[#004369]">FALE COMIGO</h2>
-        
+          {/* Título e descrição da seção */}
           <Image
           src="/initial/heading-contact.svg"
           alt="Contato"
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-129"
           aria-hidden="true"
           quality={100}
-          width={516}
-          height={516}/>
-        </div>
+          width={400}
+          height={400}/>
 
-        <p className="max-w-178 text-center text-[#191919] text-xl font-medium mt-4 my-10">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
+          <p className="max-w-178 text-center text-[#191919] text-xl font-medium mt-4 my-10">Sinta-se à vontade para entrar em contato comigo, seja para conversar sobre suas dúvidas ou até mesmo para um bate-papo sobre sua ideia ou necessidade!</p>
         </div>
 
         {/* Formulário de contato */}
