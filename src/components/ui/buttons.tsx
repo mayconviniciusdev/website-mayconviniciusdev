@@ -28,8 +28,7 @@ export const HeaderNavButton: React.FC<ButtonProps> = ({text}) => {
     smooth={true}
     duration={500}
     aria-label={text ?? "Ir para contato"}
-    className="cursor-pointer font-bold transition-all duration-300 text-[#004369] hover:text-[#004369]/80 bg-[#D9D9D9]
-    md:ml-4 md:px-6 md:py-2 md:hover:scale-105 md:rounded-lg"> 
+    className="cursor-pointer font-bold transition-all duration-300 text-[#004369] hover:text-[#004369]/80 bg-[#D9D9D9] px-6 py-2 hover:scale-105 rounded-lg"> 
       {text}
     </Link>
   ); 
@@ -67,7 +66,7 @@ export const SecondaryButton: React.FC<ButtonProps> = ({text}) => {
     <Link
     to="contact"
     smooth={true}
-    className="cursor-pointer rounded-lg bg-[#D9D9D9] px-8 py-2 font-semibold text-md text-[#004369] hover:scale-105 transition-all duration-300"
+    className="cursor-pointer rounded-lg bg-[#D9D9D9] px-4 py-2 font-semibold text-md text-[#004369] hover:scale-105 transition-all duration-300"
     duration={500}>
       {text}
     </Link>
