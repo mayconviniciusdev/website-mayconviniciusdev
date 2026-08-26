@@ -99,7 +99,7 @@ export default function Contact() {
             {...register('name')}
             className="w-full py-4 pl-4 rounded-lg bg-transparent border border-[#004369] placeholder-[#2F4F4F] placeholder:text-sm
             focus:outline-none focus:border-[#004369]/50 focus:placeholder-[#2F4F4F]/80"/>
-            {errors.name && <p className="text-red-200 text-sm ml-1 mt-1">{errors.name.message}</p>}
+            {errors.name && <p className="text-red-400 text-sm ml-1 mt-1">{errors.name.message}</p>}
 
              {/* Campos email e whatsapp */}
             <div className="my-4 grid gap-4 md:grid-cols-2">
@@ -111,7 +111,7 @@ export default function Contact() {
                 {...register('email')}
                 className="py-4 pl-4 rounded-lg bg-transparent border border-[#004369] placeholder-[#2F4F4F] placeholder:text-sm
                 focus:outline-none focus:border-[#004369]/50 focus:placeholder-[#2F4F4F]/80"/>
-                {errors.email && <p className="text-red-200 text-sm ml-1 mt-1">{errors.email.message}</p>}
+                {errors.email && <p className="text-red-400 text-sm ml-1 mt-1">{errors.email.message}</p>}
               </div>
               
               <div className="flex flex-col">
@@ -122,7 +122,7 @@ export default function Contact() {
                 {...register('whatsapp')}
                 className="py-4 pl-4 rounded-lg bg-transparent border border-[#004369] placeholder-[#2F4F4F] placeholder:text-sm
                 focus:outline-none focus:border-[#004369]/50 focus:placeholder-[#2F4F4F]/80"/>
-                {errors.whatsapp && <p className="text-red-200 text-sm ml-1 mt-1">{errors.whatsapp.message}</p>}
+                {errors.whatsapp && <p className="text-red-400 text-sm ml-1 mt-1">{errors.whatsapp.message}</p>}
               </div>
             </div>
 
@@ -133,7 +133,7 @@ export default function Contact() {
             {...register('message')} 
             className="w-full py-4 pl-4 rounded-lg bg-transparent border border-[#004369] placeholder-[#2F4F4F] placeholder:text-sm
             focus:outline-none focus:border-[#004369]/50 focus:placeholder-[#2F4F4F]/80"/>
-            {errors.message && <p className="text-red-200 text-sm ml-1 mt-1 mb-4">{errors.message.message}</p>}
+            {errors.message && <p className="text-red-400 text-sm ml-1 mt-1 mb-4">{errors.message.message}</p>}
 
             {/* Botão de envio */}
             <ButtonForm type="submit" disabled={status === 'loading'}>
@@ -142,8 +142,8 @@ export default function Contact() {
 
             {/* Feedback de status */}
             <div className="ml-1 mt-4">
-              {status === 'success' && (<p className="text-green-200">Mensagem enviada com sucesso!</p>)}
-              {status === 'error' && (<p className="text-red-200">Erro ao enviar mensagem. Tente novamente!</p>)}
+              {status === 'success' && (<p className="text-green-400">Mensagem enviada com sucesso!</p>)}
+              {status === 'error' && (<p className="text-red-400">Erro ao enviar mensagem. Tente novamente!</p>)}
             </div>
           </form>
         </div>
