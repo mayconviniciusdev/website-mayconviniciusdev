@@ -1,6 +1,7 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 /*
   Componente: HeaderSocialLinks
   Arquivo: src/components/ui/links.tsx
@@ -96,34 +97,60 @@ export const FooterSocialLinks = ({githubIcon, linkedinIcon, instagramIcon, emai
 
 export const SocialLinktree = ({githubIcon, linkedinIcon, instagramIcon, siteIcon}: IconsProps) => {
   return (
-    <div className="text-[#F6F6F6] text-xs">
+    <div className="flex flex-col gap-2 text-sm font-medium text-[#F6F6F6]">
       <Link target="_blank" href={"https://github.com/mayconviniciusdev"}>
-        {githubIcon && ( 
-        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
-          <FontAwesomeIcon icon={githubIcon} className="h-6 mr-4"/>
-          <span>GitHub</span>
-        </div>)}
+        {githubIcon && (
+          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#004369] px-4 py-3.5 shadow-[0_18px_35px_rgba(0,67,105,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#004369]/90">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"><FontAwesomeIcon icon={githubIcon} className="h-4"/></span>
+              <span>GitHub</span>
+            </div>
+            
+            <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="h-4 text-white/80"/>
+          </div>
+        )}
       </Link>
-      
+
       <Link target="_blank" href={"https://mayconviniciusdev.com/"}>
-        {siteIcon && ( 
-        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
-          <FontAwesomeIcon icon={siteIcon} className="h-6 mr-4"/>
-          <span>Website</span>
-        </div>)}
+        {siteIcon && (
+          <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#004369] px-4 py-3.5 shadow-[0_18px_35px_rgba(0,67,105,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#004369]/90">
+            <div className="flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"><FontAwesomeIcon icon={siteIcon} className="h-4"/></span>
+              <span>Website</span>
+            </div>
+
+            <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="h-4 text-white/80"/>
+          </div>
+        )}
       </Link>
 
       <Link target="_blank" href={"https://www.instagram.com/mayconviniciusdev"}>
-        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
-          <FontAwesomeIcon icon={instagramIcon} className="h-6 mr-4"/>
-          <span>Instagram</span>
+        <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#004369] px-4 py-3.5 shadow-[0_18px_35px_rgba(0,67,105,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#004369]/90">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"><FontAwesomeIcon icon={instagramIcon} className="h-4"/></span>
+            <span>Instagram</span>
+          </div>
+
+          <FontAwesomeIcon
+          icon={faArrowUpRightFromSquare}
+          className="h-4 text-white/80"/>
         </div>
       </Link>
 
       <Link target="_blank" href={"https://www.linkedin.com/in/mayconviniciusdev"}>
-        <div className="flex items-center justify-center hover:text-[#F6F6F6]/60 bg-[#004369] py-4 px-8 my-4 rounded-xl">
-          <FontAwesomeIcon icon={linkedinIcon} className="h-6 mr-4"/>
-          <span>Linkedin</span>
+        <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#004369] px-4 py-3.5 shadow-[0_18px_35px_rgba(0,67,105,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#004369]/90">
+          <div className="flex items-center gap-3">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10"><FontAwesomeIcon icon={linkedinIcon} className="h-4"/></span>
+            <span>Linkedin</span>
+          </div>
+
+          <FontAwesomeIcon
+          icon={faArrowUpRightFromSquare}
+          className="h-4 text-white/80"/>
         </div>
       </Link>
     </div>
